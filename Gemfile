@@ -47,6 +47,8 @@ group :development, :test do
   gem 'capybara'
   gem 'pry'
   gem 'pry-byebug'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner', '~> 1.2.0'
 end
 
 group :development do
