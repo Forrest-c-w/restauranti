@@ -2,6 +2,16 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  def show
+    @restaurant = Restaurant.find_by_id params[:id]
+    if @restaurant
+      render :show
+    else
+      flash[:warning] = "sorry that restaurant doesn't exist"
+      redirect_to root_path
+  end
+end
+
   def index
   end
 
